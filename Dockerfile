@@ -9,14 +9,12 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install -j$(nproc) iconv mcrypt \
     && pecl install redis-3.1.0 \
     && pecl install mongodb \
-    && pecl install memcached-2.2.0 \
     && pecl install cassandra-1.3.0 \
     && pecl install couchbase-2.3.2 \
     && pecl install varnish-1.2.2 \
     && pecl install oauth-2.0.2 \
     && docker-php-ext-enable redis \
     && docker-php-ext-enable mongodb \
-    && docker-php-ext-enable memcached \
     && docker-php-ext-enable cassandra \
     && docker-php-ext-enable couchbase \
     && docker-php-ext-enable varnish \
