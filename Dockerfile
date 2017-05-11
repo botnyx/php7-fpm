@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
     && pecl install redis-3.1.0 \
     && pecl install mongodb \
     && pecl install memcached-2.2.0 \
-    && docker-php-ext-enable redis mongodb \
+    && docker-php-ext-enable redis \
+    && docker-php-ext-enable mongodb \
     && docker-php-ext-enable memcached \
     && docker-php-source delete
