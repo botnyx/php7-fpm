@@ -4,6 +4,8 @@ RUN apt-get update && apt-get install -y \
 	zlib1g-dev \
 	libcurl4-openssl-dev \
 	pkg-config \
+	libssl-dev \
+	libsslcommon2-dev \
     && docker-php-ext-install -j$(nproc) iconv mcrypt \
     && pecl install redis-3.1.0 \
     && pecl install mongodb \
