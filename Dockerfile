@@ -18,4 +18,7 @@ RUN buildDeps="libpq-dev libzip-dev libfreetype6-dev libjpeg62-turbo-dev libpng1
     && docker-php-ext-enable redis \
     && docker-php-ext-enable mongodb \
     && docker-php-ext-enable oauth \
-    && docker-php-ext-install pdo pdo_pgsql pgsql gd
+    && docker-php-ext-install pdo pdo_pgsql pgsql gd 
+    && docker-php-ext-enable pdo_pgsql
+    && docker-php-ext-enable pgsql
+    
