@@ -7,6 +7,7 @@ RUN buildDeps="libpq-dev libzip-dev libfreetype6-dev libjpeg62-turbo-dev libpng1
 	zlib1g-dev \
 	libcurl4-openssl-dev \
 	pkg-config \
+	libpq-dev \
 	libssl-dev \
 	libpcre3-dev \
     && docker-php-ext-install -j$(nproc) iconv mcrypt \
