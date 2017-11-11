@@ -1,7 +1,6 @@
 FROM php:7.0-fpm
 RUN buildDeps="libpq-dev libzip-dev libfreetype6-dev libjpeg62-turbo-dev libpng12-dev " && apt-get update && apt-get install -y \
-        postgresql-dev \
-	libmcrypt-dev \
+        libmcrypt-dev \
 	libmemcached-dev \
 	libvarnishapi-dev \
 	zlib1g-dev \
