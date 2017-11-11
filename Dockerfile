@@ -1,5 +1,5 @@
 FROM php:7.0-fpm
-RUN apt-get update && apt-get install -y \
+RUN buildDeps="libpq-dev libzip-dev libfreetype6-dev libjpeg62-turbo-dev libpng12-dev " && apt-get update && apt-get install -y \
         libmcrypt-dev \
 	libmemcached-dev \
 	zlib1g-dev \
