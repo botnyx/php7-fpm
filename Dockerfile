@@ -9,7 +9,7 @@ RUN buildDeps="libpq-dev libzip-dev libfreetype6-dev libjpeg62-turbo-dev libpng1
 	pkg-config \
 	libpq-dev \
 	libssl-dev \
-	icu-dev \
+	libicu-dev \
 	libpcre3-dev \
     && docker-php-ext-install -j$(nproc) iconv mcrypt \
     && pecl install redis-3.1.0 \
