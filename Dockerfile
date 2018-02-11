@@ -19,12 +19,14 @@ RUN buildDeps="libpq-dev libzip-dev libfreetype6-dev libjpeg62-turbo-dev libpng1
     && docker-php-ext-enable redis \
     && docker-php-ext-enable mongodb \
     && docker-php-ext-enable oauth \ 
-    && docker-php-ext-install iconv json intl mysqli pdo pdo_pgsql pgsql gd pdo_mysql \
+    && docker-php-ext-install iconv json intl mysqli pdo pdo_pgsql pgsql pdo_mysql \
     && docker-php-ext-enable pdo_pgsql \
     && docker-php-ext-enable pgsql \
     && docker-php-ext-enable pdo \
     && docker-php-ext-enable gd \
-    && docker-php-ext-enable pdo_mysql
+    && docker-php-ext-enable pdo_mysql 
+RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/
+RUN docker-php-ext-install -j$(nproc) gd
     
 
     
