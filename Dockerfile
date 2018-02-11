@@ -25,8 +25,12 @@ RUN buildDeps="libpq-dev libzip-dev libfreetype6-dev libjpeg62-turbo-dev libpng1
     pdo_pgsql \
     pgsql \
     gd \
+    mysql \
+    mysqli \
     && docker-php-ext-enable pdo \
     && docker-php-ext-enable pdo_pgsql \
     && docker-php-ext-enable pgsql \
     && docker-php-ext-enable gd \
+    && docker-php-ext-install mysql
+    && docker-php-ext-install mysqli
     
